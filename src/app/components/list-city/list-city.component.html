@@ -1,0 +1,8 @@
+<mat-nav-list>
+    <!-- Each location is anchored with router link to access the next html -->
+    <!-- LINK: localhost:4200/weather/{City Name} -->
+    <a mat-list-item *ngFor="let loc of locations" [routerLink]="['weather',loc.city]">
+        <!-- [IMAGE] City (Country) -->
+        <img width="50" length="50" src="{{loc.imageUrl}}"/> &nbsp; {{loc.city}} &nbsp; ({{loc.country}})
+    </a>
+</mat-nav-list>
